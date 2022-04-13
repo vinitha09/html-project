@@ -1,0 +1,62 @@
+<!DOCTYPE>
+<html>
+<head>
+<style>
+    body {
+      background-image: url('abs.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;  
+      background-size: cover;
+    }
+    </style>
+    <script>  
+     function ab(){
+    	 open("registration.html")
+     }
+      function validateform(){  
+      var name=document.login.name.value;  
+        var pwd=document.login.pwd.value;  
+       
+  
+        if (name==null || name==""){  
+    alert("Name can't be blank");  
+     
+    return false;  
+    }else if(pwd.length<6){  
+    alert("Password must be at least 6 characters long.");  
+    return false;  
+      }  
+     
+      else{
+        open("sender.html")
+      }
+    }  
+    </script>
+</head>
+
+<body style="background-color:skyblue;">
+    <h1 style="background-color: grey;color:red;text-align: center;">Courier Service System</h1>
+  
+    <form  action="see"style="text-align: center; " name="login" onsubmit="return validateform()" method="post">
+      <h1 style="color:blueviolet;font-size:40px;">Login Details</h1> 
+           
+      <tr><td><label><b>User_Type</b></label>
+        <select>
+            <option>Admin</option>
+            <option>Employee</option>
+            <option>User</option>
+        </select><br><br>
+        <label><b>Username</b></label>
+        <td><input type="text" name="name"><br><br>
+        
+            <tr><td><label for="Password"style="font-size:24px;background-color:yellow mist">Password</label></th>
+              <td><input type="Password" name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"><br><br>
+      <span class="psw">Forgot <a href="forgot.html"style="font-size:18px;background-color:yellow mist">password?</a></span><br><br>
+
+   <button type="submit" name="submit"style="font-size:20px;background-color:yellow mist">submit</button>
+   <button type="NewUser" name="NewUser" onclick="ab()" style="background-color:white#ffe135#ffe135;padding:14px 20px;">NewUser</button>
+</form>
+</body>
+</html>
+  
